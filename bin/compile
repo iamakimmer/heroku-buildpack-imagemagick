@@ -66,6 +66,13 @@ fi
 # </policymap>
 # EOF
 
+echo "-----> Writing policy file"
+mkdir -p $INSTALL_DIR/etc/ImageMagick
+cat > $INSTALL_DIR/policy.xml <<EOF
+<policymap>
+</policymap>
+EOF
+
 # update PATH and LD_LIBRARY_PATH
 echo "-----> Updating environment variables"
 PROFILE_PATH="$BUILD_DIR/.profile.d/imagemagick.sh"
